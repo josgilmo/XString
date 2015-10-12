@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1444652526">
+  <project timestamp="1444652526">
+    <package name="XString">
+      <file name="/home/jose/workspace/MyThings/TestingBook/Strings/src/XString/XString.php">
+        <class name="XString" namespace="XString">
+          <metrics methods="26" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="134" coveredstatements="109" elements="160" coveredelements="119"/>
+        </class>
+        <line num="26" type="method" name="__construct" crap="3" count="31"/>
+        <line num="28" type="stmt" count="31"/>
+        <line num="29" type="stmt" count="31"/>
+        <line num="30" type="stmt" count="31"/>
+        <line num="31" type="stmt" count="31"/>
+        <line num="32" type="stmt" count="31"/>
+        <line num="43" type="method" name="center" crap="2" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="61" type="method" name="delete" crap="2" count="0"/>
+        <line num="64" type="stmt" count="0"/>
+        <line num="74" type="method" name="insert" crap="1" count="7"/>
+        <line num="76" type="stmt" count="7"/>
+        <line num="78" type="stmt" count="7"/>
+        <line num="88" type="method" name="lastPartition" crap="2.02" count="2"/>
+        <line num="91" type="stmt" count="2"/>
+        <line num="92" type="stmt" count="0"/>
+        <line num="95" type="stmt" count="2"/>
+        <line num="96" type="stmt" count="2"/>
+        <line num="98" type="stmt" count="2"/>
+        <line num="100" type="stmt" count="2"/>
+        <line num="113" type="method" name="leftJustify" crap="2" count="0"/>
+        <line num="116" type="stmt" count="0"/>
+        <line num="123" type="method" name="length" crap="2" count="0"/>
+        <line num="125" type="stmt" count="0"/>
+        <line num="136" type="method" name="partition" crap="2" count="0"/>
+        <line num="139" type="stmt" count="0"/>
+        <line num="146" type="method" name="reverse" crap="2" count="0"/>
+        <line num="149" type="stmt" count="0"/>
+        <line num="158" type="method" name="scrub" crap="12" count="0"/>
+        <line num="160" type="stmt" count="0"/>
+        <line num="161" type="stmt" count="0"/>
+        <line num="162" type="stmt" count="0"/>
+        <line num="163" type="stmt" count="0"/>
+        <line num="164" type="stmt" count="0"/>
+        <line num="165" type="stmt" count="0"/>
+        <line num="166" type="stmt" count="0"/>
+        <line num="168" type="stmt" count="0"/>
+        <line num="170" type="stmt" count="0"/>
+        <line num="182" type="method" name="rightJustify" crap="4.01" count="2"/>
+        <line num="184" type="stmt" count="2"/>
+        <line num="185" type="stmt" count="0"/>
+        <line num="188" type="stmt" count="2"/>
+        <line num="189" type="stmt" count="2"/>
+        <line num="190" type="stmt" count="2"/>
+        <line num="191" type="stmt" count="2"/>
+        <line num="192" type="stmt" count="2"/>
+        <line num="193" type="stmt" count="2"/>
+        <line num="194" type="stmt" count="2"/>
+        <line num="195" type="stmt" count="2"/>
+        <line num="197" type="stmt" count="2"/>
+        <line num="198" type="stmt" count="2"/>
+        <line num="200" type="stmt" count="2"/>
+        <line num="208" type="method" name="shuffle" crap="2" count="0"/>
+        <line num="211" type="stmt" count="0"/>
+        <line num="224" type="method" name="slice" crap="2" count="0"/>
+        <line num="227" type="stmt" count="0"/>
+        <line num="236" type="method" name="squeeze" crap="2" count="7"/>
+        <line num="238" type="stmt" count="7"/>
+        <line num="239" type="stmt" count="7"/>
+        <line num="240" type="stmt" count="7"/>
+        <line num="241" type="stmt" count="2"/>
+        <line num="242" type="stmt" count="2"/>
+        <line num="243" type="stmt" count="2"/>
+        <line num="244" type="stmt" count="5"/>
+        <line num="245" type="stmt" count="5"/>
+        <line num="247" type="stmt" count="7"/>
+        <line num="249" type="stmt" count="7"/>
+        <line num="279" type="method" name="successor" crap="2" count="0"/>
+        <line num="282" type="stmt" count="0"/>
+        <line num="290" type="method" name="swapCase" crap="3" count="2"/>
+        <line num="292" type="stmt" count="2"/>
+        <line num="293" type="stmt" count="2"/>
+        <line num="294" type="stmt" count="2"/>
+        <line num="295" type="stmt" count="2"/>
+        <line num="296" type="stmt" count="2"/>
+        <line num="297" type="stmt" count="2"/>
+        <line num="298" type="stmt" count="2"/>
+        <line num="300" type="stmt" count="2"/>
+        <line num="301" type="stmt" count="2"/>
+        <line num="303" type="stmt" count="2"/>
+        <line num="311" type="method" name="toCamelCase" crap="2" count="0"/>
+        <line num="314" type="stmt" count="0"/>
+        <line num="321" type="method" name="toSnakeCase" crap="20" count="11"/>
+        <line num="325" type="stmt" count="11"/>
+        <line num="326" type="stmt" count="11"/>
+        <line num="327" type="stmt" count="11"/>
+        <line num="328" type="stmt" count="11"/>
+        <line num="329" type="stmt" count="11"/>
+        <line num="331" type="stmt" count="11"/>
+        <line num="332" type="stmt" count="11"/>
+        <line num="333" type="stmt" count="11"/>
+        <line num="335" type="stmt" count="11"/>
+        <line num="336" type="stmt" count="11"/>
+        <line num="337" type="stmt" count="11"/>
+        <line num="338" type="stmt" count="9"/>
+        <line num="339" type="stmt" count="9"/>
+        <line num="341" type="stmt" count="11"/>
+        <line num="342" type="stmt" count="1"/>
+        <line num="343" type="stmt" count="11"/>
+        <line num="344" type="stmt" count="1"/>
+        <line num="345" type="stmt" count="1"/>
+        <line num="346" type="stmt" count="1"/>
+        <line num="347" type="stmt" count="1"/>
+        <line num="348" type="stmt" count="11"/>
+        <line num="349" type="stmt" count="2"/>
+        <line num="350" type="stmt" count="2"/>
+        <line num="351" type="stmt" count="2"/>
+        <line num="352" type="stmt" count="2"/>
+        <line num="354" type="stmt" count="11"/>
+        <line num="356" type="stmt" count="11"/>
+        <line num="357" type="stmt" count="11"/>
+        <line num="358" type="stmt" count="11"/>
+        <line num="360" type="stmt" count="11"/>
+        <line num="362" type="stmt" count="11"/>
+        <line num="364" type="stmt" count="11"/>
+        <line num="375" type="method" name="wordCount" crap="2" count="0"/>
+        <line num="378" type="stmt" count="0"/>
+        <line num="389" type="method" name="wordSplit" crap="2" count="0"/>
+        <line num="392" type="stmt" count="0"/>
+        <line num="404" type="method" name="expandTabs" crap="7.03" count="1"/>
+        <line num="406" type="stmt" count="1"/>
+        <line num="407" type="stmt" count="0"/>
+        <line num="410" type="stmt" count="1"/>
+        <line num="411" type="stmt" count="1"/>
+        <line num="412" type="stmt" count="1"/>
+        <line num="416" type="stmt" count="1"/>
+        <line num="417" type="stmt" count="1"/>
+        <line num="418" type="stmt" count="1"/>
+        <line num="419" type="stmt" count="1"/>
+        <line num="420" type="stmt" count="1"/>
+        <line num="421" type="stmt" count="1"/>
+        <line num="422" type="stmt" count="1"/>
+        <line num="423" type="stmt" count="1"/>
+        <line num="424" type="stmt" count="1"/>
+        <line num="425" type="stmt" count="1"/>
+        <line num="426" type="stmt" count="1"/>
+        <line num="427" type="stmt" count="1"/>
+        <line num="428" type="stmt" count="1"/>
+        <line num="429" type="stmt" count="1"/>
+        <line num="433" type="stmt" count="1"/>
+        <line num="434" type="stmt" count="1"/>
+        <line num="436" type="stmt" count="1"/>
+        <line num="437" type="stmt" count="0"/>
+        <line num="440" type="stmt" count="1"/>
+        <line num="450" type="method" name="startWith" crap="1" count="1"/>
+        <line num="452" type="stmt" count="1"/>
+        <line num="462" type="method" name="endWith" crap="2" count="0"/>
+        <line num="464" type="stmt" count="0"/>
+        <line num="475" type="method" name="append" crap="1" count="11"/>
+        <line num="477" type="stmt" count="11"/>
+        <line num="478" type="stmt" count="11"/>
+        <line num="487" type="method" name="numBytesOfRune" crap="1" count="2"/>
+        <line num="489" type="stmt" count="2"/>
+        <line num="497" type="method" name="__toString" crap="1" count="19"/>
+        <line num="499" type="stmt" count="19"/>
+        <metrics loc="501" ncloc="253" classes="1" methods="26" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="134" coveredstatements="109" elements="160" coveredelements="119"/>
+      </file>
+    </package>
+    <metrics files="1" loc="501" ncloc="253" classes="1" methods="26" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="134" coveredstatements="109" elements="160" coveredelements="119"/>
+  </project>
+</coverage>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="2.3.4">
+<file name="/home/jose/workspace/MyThings/TestingBook/Strings/src/XString/XString.php">
+ <error line="20" column="8" severity="error" message="Expected 9 spaces after parameter name; 10 found" source="Squiz.Commenting.FunctionComment.SpacingAfterParamName"/>
+</file>
+</checkstyle>
+

@@ -17,7 +17,7 @@ class XString
     /**
      * Construct
      *
-     * @param string  $str         Str var.
+     * @param string  $str          Str var.
      * @param string  $encoding    Encoding.
      * @param boolean $forceEncode Force encoding.
      *
