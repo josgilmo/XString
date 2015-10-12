@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1444652526">
-  <project timestamp="1444652526">
+<coverage generated="1444669126">
+  <project timestamp="1444669126">
     <package name="XString">
       <file name="/home/jose/workspace/MyThings/TestingBook/Strings/src/XString/XString.php">
         <class name="XString" namespace="XString">

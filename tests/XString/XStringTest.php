@@ -36,7 +36,7 @@ class XStringTest extends \PHPUnit_Framework_TestCase
     */
     public function testCenter()
     {
-        $this->assertEquals(' hello world error', $this->xstring->center(1));
+        $this->assertEquals(' hello world ', $this->xstring->center(1));
     }
 
     /**
