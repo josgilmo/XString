@@ -19,6 +19,8 @@
 
 
 @todo:
+| Function | Friends | # |
+| -------- | ------- | --- |
 | [LeftJustify] | `str.ljust` in Python; `String#ljust` in Ruby |  |
 | [Partition] | `str.partition` in Python; `String#partition` in Ruby |  |
 | [RuneWidth] | - |  |
@@ -28,6 +30,8 @@
 | [Translate] | `str.translate` in Python; `String#tr` in Ruby; `strtr` in PHP; `tr///` in Perl | |
 
 
+| Function | Friends | # |
+| -------- | ------- | --- |
 | [WordSplit] | - | |
 | [Width] | `mb_strwidth` in PHP | |
 | [WordCount] | `str_word_count` in PHP | |
