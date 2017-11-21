@@ -302,4 +302,12 @@ class XStringTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(3, XString::numBytesOfRune('中'));
     }
+
+    public function testReverse()
+    {
+        $hello = new XString("hello");
+        $this->assertEquals("olleh", (string)$hello->reverse());
+        $text2 = new XString("打个劫");
+        $this->assertEquals("劫个打", (string)$text2->reverse());
+    }
 }

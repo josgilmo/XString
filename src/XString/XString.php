@@ -126,29 +126,6 @@ class XString
     }
 
     /**
-     * Partition splits a string by sep into three parts. The return value is a slice of strings with head, match and tail.
-     * If str contains sep, for example "hello" and "l", Partition returns
-     *
-     * @param string $sep Separator.
-     *
-     * @return void
-     */
-    public function partition($sep)
-    {
-       // TODO: Implement
-    }
-
-    /**
-     * Reverse a utf8 encoded string.
-     *
-     * @return void
-     */
-    public function reverse()
-    {
-       // TODO: Implement
-    }
-
-    /**
      * Reverse a utf8 encoded string.
      *
      * @param string $repl Repl var.
@@ -169,6 +146,8 @@ class XString
 
         return $output;
     }
+
+
 
     /**
      * RightJustify returns a string with content string at left side if str's rune length is smaller than length. If str's rune length is larger than length, str itself will be returned.
@@ -364,32 +343,6 @@ class XString
         return $this;
     }
 
-    /**
-     * Count number of words in a string.
-     * Word is defined as a locale dependent string containing alphabetic characters, which may also contain but not start with `'` and `-` characters.
-     *
-     * @param string $str Str var.
-     *
-     * @return void
-     */
-    public function wordCount($str)
-    {
-       // TODO: Implement
-    }
-
-    /**
-     *
-     * Splits a string into words. Returns a slice of words. If there is no word in a string, return nil.
-     * Word is defined as a locale dependent string containing alphabetic characters, which may also contain but not start with `'` and `-` characters.
-     *
-     * @param string $str Str var.
-     *
-     * @return void
-     */
-    public function wordSplit($str)
-    {
-       // TODO: Implement
-    }
 
     /**
      * ExpandTabs can expand tabs ('\t') rune in str to one or more spaces dpending on
@@ -490,6 +443,50 @@ class XString
     }
 
     /**
+     * Reverse a utf8 encoded string.
+     *
+     * @return void
+     */
+    public function reverse()
+    {
+        $length   = mb_strlen($this->str, 'UTF-8');
+        $reversed = '';
+        while ($length-- > 0) {
+            $reversed .= mb_substr($this->str, $length, 1, 'UTF-8');
+        }
+
+        return new XString($reversed);
+    }
+
+    /**
+     * Count number of words in a string.
+     * Word is defined as a locale dependent string containing alphabetic characters, which may also contain but not start with `'` and `-` characters.
+     *
+     * @param string $str Str var.
+     *
+     * @return void
+     */
+    public function wordCount($str)
+    {
+       // TODO: Implement
+    }
+
+    /**
+     *
+     * Splits a string into words. Returns a slice of words. If there is no word in a string, return nil.
+     * Word is defined as a locale dependent string containing alphabetic characters, which may also contain but not start with `'` and `-` characters.
+     *
+     * @param string $str Str var.
+     *
+     * @return void
+     */
+    public function wordSplit($str)
+    {
+       // TODO: Implement
+    }
+
+
+    /**
      * To string function. Magic method.
      *
      * @return string
@@ -498,4 +495,19 @@ class XString
     {
         return $this->str;
     }
+
+    /**
+     * Partition splits a string by sep into three parts. The return value is a slice of strings with head, match and tail.
+     * If str contains sep, for example "hello" and "l", Partition returns
+     *
+     * @param string $sep Separator.
+     *
+     * @return void
+     */
+    public function partition($sep)
+    {
+       // TODO: Implement
+    }
+
+
 }
