@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1444669126">
-  <project timestamp="1444669126">
+<coverage generated="1511284905">
+  <project timestamp="1511284905">
     <package name="XString">
-      <file name="/home/jose/workspace/MyThings/TestingBook/Strings/src/XString/XString.php">
+      <file name="/home/jose/workspace/XString/src/XString/XString.php">
         <class name="XString" namespace="XString">
-          <metrics methods="26" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="134" coveredstatements="109" elements="160" coveredelements="119"/>
+          <metrics methods="26" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="118" coveredstatements="95" elements="144" coveredelements="105"/>
         </class>
         <line num="26" type="method" name="__construct" crap="3" count="31"/>
         <line num="28" type="stmt" count="31"/>
         <line num="29" type="stmt" count="31"/>
-        <line num="30" type="stmt" count="31"/>
         <line num="31" type="stmt" count="31"/>
         <line num="32" type="stmt" count="31"/>
         <line num="43" type="method" name="center" crap="2" count="1"/>
         <line num="45" type="stmt" count="1"/>
         <line num="46" type="stmt" count="1"/>
         <line num="47" type="stmt" count="1"/>
-        <line num="48" type="stmt" count="1"/>
         <line num="49" type="stmt" count="1"/>
         <line num="51" type="stmt" count="1"/>
         <line num="61" type="method" name="delete" crap="2" count="0"/>
@@ -45,9 +43,7 @@
         <line num="162" type="stmt" count="0"/>
         <line num="163" type="stmt" count="0"/>
         <line num="164" type="stmt" count="0"/>
-        <line num="165" type="stmt" count="0"/>
         <line num="166" type="stmt" count="0"/>
-        <line num="168" type="stmt" count="0"/>
         <line num="170" type="stmt" count="0"/>
         <line num="182" type="method" name="rightJustify" crap="4.01" count="2"/>
         <line num="184" type="stmt" count="2"/>
@@ -56,11 +52,9 @@
         <line num="189" type="stmt" count="2"/>
         <line num="190" type="stmt" count="2"/>
         <line num="191" type="stmt" count="2"/>
-        <line num="192" type="stmt" count="2"/>
         <line num="193" type="stmt" count="2"/>
         <line num="194" type="stmt" count="2"/>
         <line num="195" type="stmt" count="2"/>
-        <line num="197" type="stmt" count="2"/>
         <line num="198" type="stmt" count="2"/>
         <line num="200" type="stmt" count="2"/>
         <line num="208" type="method" name="shuffle" crap="2" count="0"/>
@@ -73,7 +67,6 @@
         <line num="240" type="stmt" count="7"/>
         <line num="241" type="stmt" count="2"/>
         <line num="242" type="stmt" count="2"/>
-        <line num="243" type="stmt" count="2"/>
         <line num="244" type="stmt" count="5"/>
         <line num="245" type="stmt" count="5"/>
         <line num="247" type="stmt" count="7"/>
@@ -86,9 +79,7 @@
         <line num="294" type="stmt" count="2"/>
         <line num="295" type="stmt" count="2"/>
         <line num="296" type="stmt" count="2"/>
-        <line num="297" type="stmt" count="2"/>
         <line num="298" type="stmt" count="2"/>
-        <line num="300" type="stmt" count="2"/>
         <line num="301" type="stmt" count="2"/>
         <line num="303" type="stmt" count="2"/>
         <line num="311" type="method" name="toCamelCase" crap="2" count="0"/>
@@ -106,7 +97,6 @@
         <line num="336" type="stmt" count="11"/>
         <line num="337" type="stmt" count="11"/>
         <line num="338" type="stmt" count="9"/>
-        <line num="339" type="stmt" count="9"/>
         <line num="341" type="stmt" count="11"/>
         <line num="342" type="stmt" count="1"/>
         <line num="343" type="stmt" count="11"/>
@@ -119,10 +109,8 @@
         <line num="350" type="stmt" count="2"/>
         <line num="351" type="stmt" count="2"/>
         <line num="352" type="stmt" count="2"/>
-        <line num="354" type="stmt" count="11"/>
         <line num="356" type="stmt" count="11"/>
         <line num="357" type="stmt" count="11"/>
-        <line num="358" type="stmt" count="11"/>
         <line num="360" type="stmt" count="11"/>
         <line num="362" type="stmt" count="11"/>
         <line num="364" type="stmt" count="11"/>
@@ -130,7 +118,7 @@
         <line num="378" type="stmt" count="0"/>
         <line num="389" type="method" name="wordSplit" crap="2" count="0"/>
         <line num="392" type="stmt" count="0"/>
-        <line num="404" type="method" name="expandTabs" crap="7.03" count="1"/>
+        <line num="404" type="method" name="expandTabs" crap="7.05" count="1"/>
         <line num="406" type="stmt" count="1"/>
         <line num="407" type="stmt" count="0"/>
         <line num="410" type="stmt" count="1"/>
@@ -142,16 +130,12 @@
         <line num="419" type="stmt" count="1"/>
         <line num="420" type="stmt" count="1"/>
         <line num="421" type="stmt" count="1"/>
-        <line num="422" type="stmt" count="1"/>
         <line num="423" type="stmt" count="1"/>
         <line num="424" type="stmt" count="1"/>
-        <line num="425" type="stmt" count="1"/>
         <line num="426" type="stmt" count="1"/>
         <line num="427" type="stmt" count="1"/>
-        <line num="428" type="stmt" count="1"/>
         <line num="429" type="stmt" count="1"/>
         <line num="433" type="stmt" count="1"/>
-        <line num="434" type="stmt" count="1"/>
         <line num="436" type="stmt" count="1"/>
         <line num="437" type="stmt" count="0"/>
         <line num="440" type="stmt" count="1"/>
@@ -166,9 +150,9 @@
         <line num="489" type="stmt" count="2"/>
         <line num="497" type="method" name="__toString" crap="1" count="19"/>
         <line num="499" type="stmt" count="19"/>
-        <metrics loc="501" ncloc="253" classes="1" methods="26" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="134" coveredstatements="109" elements="160" coveredelements="119"/>
+        <metrics loc="501" ncloc="253" classes="1" methods="26" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="118" coveredstatements="95" elements="144" coveredelements="105"/>
       </file>
     </package>
-    <metrics files="1" loc="501" ncloc="253" classes="1" methods="26" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="134" coveredstatements="109" elements="160" coveredelements="119"/>
+    <metrics files="1" loc="501" ncloc="253" classes="1" methods="26" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="118" coveredstatements="95" elements="144" coveredelements="105"/>
   </project>
 </coverage>
