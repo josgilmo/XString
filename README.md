@@ -1,6 +1,13 @@
 
 # XStrings
 
+XString it's a port in PHP of the Go library [XStrings](https://github.com/huandu/xstrings). It was started as a documetation for my book about testing in PHP (in Spanish) but my intention it's to keep working on this repository and enrich the strings manipulation in PHP.
+
+In the beginning of this package we are not using the semver nomenclature, so not use it in your proyect for now.
+
+Pull request and ideas are welcome.
+
+
 | Function | Friends | # |
 | -------- | ------- | --- |
 | [Center] | `str.center` in Python; `String#center` in Ruby |  |
@@ -22,13 +29,13 @@
 
 | Function | Friends | # |
 | -------- | ------- | --- |
-| [LeftJustify] | `str.ljust` in Python; `String#ljust` in Ruby |  |
-| [Partition] | `str.partition` in Python; `String#partition` in Ruby |  |
+| [LeftJustify] | `str.ljust` in Python; `String#ljust` in Ruby | [1](https://github.com/josgilmo/XString/issues/1) |
+| [Partition] | `str.partition` in Python; `String#partition` in Ruby | [2](https://github.com/josgilmo/XString/issues/2) |
+| [Successor] | `String#succ` or `String#next` in Ruby | [3](https://github.com/josgilmo/XString/issues/3) |
+| [ToCamelCase] | `String#camelize` in RoR | [4](https://github.com/josgilmo/XString/issues/3) |
+| [Translate] | `str.translate` in Python; `String#tr` in Ruby; `strtr` in PHP; `tr///` in Perl | |
 | [RuneWidth] | - |  |
 | [ShuffleSource] | `str_shuffle` in PHP |  |
-| [Successor] | `String#succ` or `String#next` in Ruby | |
-| [ToCamelCase] | `String#camelize` in RoR | |
-| [Translate] | `str.translate` in Python; `String#tr` in Ruby; `strtr` in PHP; `tr///` in Perl | |
 
 
 | Function | Friends | # |
