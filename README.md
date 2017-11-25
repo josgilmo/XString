@@ -19,6 +19,7 @@
 
 
 @todo:
+
 | Function | Friends | # |
 | -------- | ------- | --- |
 | [LeftJustify] | `str.ljust` in Python; `String#ljust` in Ruby |  |
