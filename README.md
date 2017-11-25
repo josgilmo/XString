@@ -1,7 +1,7 @@
 
 # XStrings
 
-[![Build Status](https://travis-ci.org/josgilmo/XSstring.png?branch=master)](https://travis-ci.org/josgilmo/XString)
+[![Build Status](https://travis-ci.org/josgilmo/XString.png?branch=master)](https://travis-ci.org/josgilmo/XString)
 [![Coverage Status](https://coveralls.io/repos/github/josgilmo/XString/badge.svg?branch=master)](https://coveralls.io/github/josgilmo/XString?branch=master)
 
 XString it's a port in PHP of the Go library [XStrings](https://github.com/huandu/xstrings). It was started as a documetation for my book about testing in PHP (in Spanish) but my intention it's to keep working on this repository and enrich the strings manipulation in PHP.
