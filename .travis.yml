@@ -5,12 +5,20 @@ php:
   - 5.5
   - 5.6
   - 7.0 
+  - 7.1
 
-before_script:
-  - composer install --dev
+sudo: false
 
-script: vendor/bin/phpunit --configuration phpunit.xml
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+install:
+    - composer install
+
+after_script:
+  - php vendor/bin/coveralls
 
 notifications:
-    email:
-        - jose.gilmolina@gmail.com
+  email:
+    - jose.gilmolina@gmail.com
