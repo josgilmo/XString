@@ -3,4 +3,5 @@ vendor/
 build/
 cov/
 test/
+bin/
 *.swp
