@@ -175,18 +175,18 @@ class XStringTest extends \PHPUnit_Framework_TestCase
      * @dataProvider partitionProvider
      *
      * @param string $str   String for test.
-     * @param string $sep   Separator.
+     * @param string $array   Separator.
      * @param string $part1 Part one of result.
      * @param string $part2 Part two of result.
      *
      * @return void
      */
-    public function testLastPartition($str, $sep, $part1, $part2)
+    public function testLastPartition($str, $array, $part1, $part2)
     {
         $nxs = new XString($str);
-        $arr = $nxs->lastPartition($sep);
+        $arr = $nxs->lastPartition($array);
         $this->assertEquals($arr[0], $part1);
-        $this->assertEquals($arr[1], $sep);
+        $this->assertEquals($arr[1], $array);
         $this->assertEquals($arr[2], $part2);
     }
 
@@ -206,16 +206,16 @@ class XStringTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider scrubProvider
      * @param string $str      String to be tested.
-     * @param string $sepr     Separator.
+     * @param string $arrayr     Separator.
      * @param string $expected Expected result.
      *
      * @return void
      */
-    public function testScrub($str, $sepr, $expected)
+    public function testScrub($str, $arrayr, $expected)
     {
         $this->markTestSkipped('Not implemented yet!');
         $nxs = new XString($str, 'UTF-8', false);
-        $this->assertEquals($expected, $nxs->scrub($sepr));
+        $this->assertEquals($expected, $nxs->scrub($arrayr));
     }
 
     /**
@@ -288,6 +288,14 @@ class XStringTest extends \PHPUnit_Framework_TestCase
         return array(
             array('hello', 10, ' ', '     hello'),
             array('hello', 10, '123', '12312hello'),
+            array("hello", "10", "123", "12312hello"),
+            array("hello中文test", "4", " ",    "hello中文test"),
+            array("hello中文test", "12", " ",   " hello中文test"),
+            array("hello中文test", "18", "测试！", "测试！测试！测hello中文test"),
+            array("hello中文test", "0", "123", "hello中文test"),
+/*
+*/
+            array("hello中文test", "18", "",   "hello中文test"),
         );
     }
 

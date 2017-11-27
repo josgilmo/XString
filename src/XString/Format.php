@@ -78,12 +78,13 @@ trait Format {
      */
     public function rightJustify($size, $content)
     {
-        if (mb_strlen($this->str, 'UTF-8') >= $size) {
-            return $this->str;
+        if ($content == "" || mb_strlen($this->str, 'UTF-8') >= $size) {
+            return $this;
         }
 
         $prefix = '';
         while ((mb_strlen($this->str, 'UTF-8') + mb_strlen($prefix, 'UTF-8')) < $size) {
+
             if ($size - (mb_strlen($this->str, 'UTF-8') + mb_strlen($prefix, 'UTF-8'))  >  mb_strlen($content, 'UTF-8')) {
                 $prefix .= $content;
             } else {
@@ -92,6 +93,7 @@ trait Format {
                 $prefix .= $restContent;
             }
         }
+
         $this->str = $prefix.$this->str;
 
         return $this;
