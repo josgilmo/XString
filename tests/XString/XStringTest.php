@@ -125,20 +125,40 @@ class XStringTest extends \PHPUnit_Framework_TestCase
     /**
      * Test for expandTab method.
      *
+     * @dataProvider expandTabProvider
      * @return void
     */
-    public function testExpandTab()
+    public function testExpandTab($input, $i, $expected)
     {
-        $xstring = new XString("a\tbc\tdef\tghij\tk");
-        $this->assertEquals('a   bc  def ghij    k', $xstring->expandTabs(4));
+        $xstring = new XString($input);
+        $this->assertEquals($expected, (string)$xstring->expandTabs($i));
 
-        $xstring = new XString("abcdefg\thij\nk\tl");
-        $this->assertEquals("abcdefg hij\nk   l", $xstring->expandTabs(4));
+    }
 
-        /*
-        $xstring = new XString("z中\t文\tw");
-        $this->assertEquals("z中 文  w", $xstring->expandTabs(4));
-        */
+
+    public function expandTabProvider() 
+    {  
+        return array(
+            array("a\tbc\tdef\tghij\tk", 4, "a   bc  def ghij    k"),
+            array("abcdefg\thij\nk\tl", 4, "abcdefg hij\nk   l"),
+            array("z中\t文\tw", 4, "z中 文  w"),
+            array("abcdef", 4, "abcdef"),
+            array("abc\td\tef\tghij\nk\tl", 3, "abc   d  ef ghij\nk  l"),
+            array("abc\td\tef\tghij\nk\tl", 1, "abc d ef ghij\nk l"),
+
+        );
+    }
+
+    public function testExpandTabThrowException() {
+        $this->expectException(\Exception::class);
+        $xstring = new XString("test");
+        $xstring->expandTabs(0);
+    }
+
+    public function testExpandTabWithNegativeValueThrowException() {
+        $this->expectException(\Exception::class);
+        $xstring = new XString("test");
+        $xstring->expandTabs(-1);
     }
 
     /**

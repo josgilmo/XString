@@ -22,35 +22,31 @@ trait Format {
 
         $output = null;
         $column = 0;
-        $orig = $this->str;
-        // TODO: Fix the case for Kanjis. In the example of this url it's the solution for how iterate in
-        // a string of encoded in utf-8 chars.
-        //http://php.net/manual/en/function.mb-strwidth.php
         for ($i = 0; $i<mb_strlen($this->str, 'UTF-8'); $i++) {
-            $rune = $this->str[$i];
+            $rune = mb_substr($this->str, $i, 1, 'UTF-8');
             if ($rune == "\t") {
                 $expand = $tabSize - $column%$tabSize;
                 for ($j = 0; $j< $expand; $j++) {
                     $output .= ' ';
                 }
-                $column += $expand+1;
-                $i++;
+                $column += $expand;
             } else {
                 if ($rune == "\n") {
                     $column = 0;
                 } else {
-                    $column += $this->numBytesOfRune($this->str[$i]);
+                    $column += mb_strwidth($rune, 'UTF-8');
                 }
             }
-
-            $output .= $this->str[$i];
+            if($rune!="\t") {
+                $output .= $rune;
+            }
+        }
+        
+        if (!is_null($output)) {
+            return $output;
         }
 
-        if (is_null($output)) {
-            return $this->str;
-        }
-
-        return $output;
+        return $this->str;
     }
 
     /**
