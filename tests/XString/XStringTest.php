@@ -30,15 +30,33 @@ class XStringTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test for center method.
+     * Test for center method.a
+     * @dataProvider centerProvider
      *
      * @return void
     */
-    public function testCenter()
+    public function testCenter($content, $i, $sep, $expected)
     {
-        $this->assertEquals(' hello world ', $this->xstring->center(1));
+        $xstring = new XString($content);
+        $this->assertEquals($expected, (string)$this->xstring->center(1, $sep));
     }
 
+    public function centerProvider() 
+    {
+        return array(
+            array("hello", "4", " ",  "hello"),
+            array("hello", "10", " ",   "  hello   "),
+            array("hello", "10", "123", "12hello123"),
+
+            array("hello中文test", "4", " ",    "hello中文test"),
+            array("hello中文test", "12", " ",   "hello中文test "),
+            array("hello中文test", "18", "测试！", "测试！hello中文test测试！测"),
+
+            array("hello中文test", "0", "123", "hello中文test"),
+            array("hello中文test", "18", "",   "hello中文test"),
+    
+        );
+    }
     /**
      * Test for startWith method.
      *

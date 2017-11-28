@@ -106,6 +106,23 @@ trait Format
     */
     public function center($size, $content = ' ')
     {
+    /*
+        l := Len(str)
+
+        if l >= length || pad == "" {
+            return str
+        }
+
+        remains := length - l
+        padLen := Len(pad)
+
+        output := &bytes.Buffer{}
+        output.Grow(len(str) + (remains/padLen+1)*len(pad))
+        writePadString(output, pad, padLen, remains/2)
+        output.WriteString(str)
+        writePadString(output, pad, padLen, (remains+1)/2)
+        return output.String()
+        */
         $tmpStr = $this->str;
         for ($i = 0; $i<$size; $i++) {
             $tmpStr = $content.$tmpStr.$content;
