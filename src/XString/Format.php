@@ -73,12 +73,29 @@ trait Format
      *
      *  @return XString
      */
-    public function rightJustify($size, $content)
+    public function rightJustify($size, $pad)
     {
-        if ($content == "" || mb_strlen($this->str, 'UTF-8') >= $size) {
+        if ($pad == "" || mb_strlen($this->str, 'UTF-8') >= $size) {
             return $this;
         }
+        $remains = $size - mb_strlen($this->str, 'UTF-8');
+        $padLen = mb_strlen($pad, 'UTF-8');
+/*       
+l := Len(str)
 
+    if l >= length || pad == "" {
+        return str
+    }
+
+    remains := length - l
+    padLen := Len(pad)
+
+    output := &bytes.Buffer{}
+    output.Grow(len(str) + (remains/padLen+1)*len(pad))
+    writePadString(output, pad, padLen, remains) 
+*/
+        $this->str = $this->padString($pad, $padLen, $remains) . $this->str;
+/*
         $prefix = '';
         while ((mb_strlen($this->str, 'UTF-8') + mb_strlen($prefix, 'UTF-8')) < $size) {
             if ($size - (mb_strlen($this->str, 'UTF-8') + mb_strlen($prefix, 'UTF-8'))  >  mb_strlen($content, 'UTF-8')) {
@@ -91,8 +108,27 @@ trait Format
         }
 
         $this->str = $prefix.$this->str;
-
+*/
         return $this;
+    }
+
+
+    private function padString( $pad, $padLen, $remains) {
+        $output = ""; 
+        $repeats  = floor($remains / $padLen);
+        for($i=0;$i<$repeats; $i++){
+            $output .= $pad;
+        }
+
+        $remains = $remains% $padLen;
+        if ($remains!=0) {
+            for ($i=0; $i< $remains; $i++) {
+                $rune = mb_substr($pad, $i, 1, 'UTF-8');
+                $output .=$rune;
+            }
+        }
+
+        return $output;
     }
 
     /**
@@ -104,30 +140,19 @@ trait Format
      *
      * @return XString
     */
-    public function center($size, $content = ' ')
+    public function center($size, $pad = ' ')
     {
-    /*
-        l := Len(str)
-
-        if l >= length || pad == "" {
-            return str
+        $length = mb_strlen($this->str, 'UTF-8');  
+        if ($length >= $size || $pad == "") {
+            return $this->str;
         }
 
-        remains := length - l
-        padLen := Len(pad)
+        $remains =  $size - $length;
+        $padLen = mb_strlen($pad, 'UTF-8');
 
-        output := &bytes.Buffer{}
-        output.Grow(len(str) + (remains/padLen+1)*len(pad))
-        writePadString(output, pad, padLen, remains/2)
-        output.WriteString(str)
-        writePadString(output, pad, padLen, (remains+1)/2)
-        return output.String()
-        */
-        $tmpStr = $this->str;
-        for ($i = 0; $i<$size; $i++) {
-            $tmpStr = $content.$tmpStr.$content;
-        }
-        $this->str = $tmpStr;
+        $prefix = $this->padString($pad, $padLen, floor($remains/2));
+        $suffix = $this->padString($pad, $padLen, floor(($remains+1)/2));
+        $this->str = $prefix . $this->str . $suffix;
 
         return $this;
     }

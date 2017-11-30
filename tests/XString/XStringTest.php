@@ -30,7 +30,7 @@ class XStringTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test for center method.a
+     * Test for center method.
      * @dataProvider centerProvider
      *
      * @return void
@@ -38,14 +38,14 @@ class XStringTest extends \PHPUnit_Framework_TestCase
     public function testCenter($content, $i, $sep, $expected)
     {
         $xstring = new XString($content);
-        $this->assertEquals($expected, (string)$this->xstring->center(1, $sep));
+        $this->assertEquals($expected, (string)$xstring->center($i, $sep));
     }
 
     public function centerProvider() 
     {
         return array(
             array("hello", "4", " ",  "hello"),
-            array("hello", "10", " ",   "  hello   "),
+            array("hello",  10, " ",   "  hello   "),
             array("hello", "10", "123", "12hello123"),
 
             array("hello中文test", "4", " ",    "hello中文test"),
@@ -57,6 +57,7 @@ class XStringTest extends \PHPUnit_Framework_TestCase
     
         );
     }
+
     /**
      * Test for startWith method.
      *
@@ -314,7 +315,7 @@ class XStringTest extends \PHPUnit_Framework_TestCase
     public function testRightJustify($str, $size, $content, $expected)
     {
         $nxs = new XString($str);
-        $this->assertEquals($expected, $nxs->rightJustify($size, $content));
+        $this->assertEquals($expected, (string)$nxs->rightJustify($size, $content));
     }
 
     /**
@@ -332,8 +333,6 @@ class XStringTest extends \PHPUnit_Framework_TestCase
             array("hello中文test", "12", " ",   " hello中文test"),
             array("hello中文test", "18", "测试！", "测试！测试！测hello中文test"),
             array("hello中文test", "0", "123", "hello中文test"),
-/*
-*/
             array("hello中文test", "18", "",   "hello中文test"),
         );
     }
