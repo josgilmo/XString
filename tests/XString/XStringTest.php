@@ -132,12 +132,11 @@ class XStringTest extends \PHPUnit_Framework_TestCase
     {
         $xstring = new XString($input);
         $this->assertEquals($expected, (string)$xstring->expandTabs($i));
-
     }
 
 
-    public function expandTabProvider() 
-    {  
+    public function expandTabProvider()
+    {
         return array(
             array("a\tbc\tdef\tghij\tk", 4, "a   bc  def ghij    k"),
             array("abcdefg\thij\nk\tl", 4, "abcdefg hij\nk   l"),
@@ -149,13 +148,15 @@ class XStringTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-    public function testExpandTabThrowException() {
+    public function testExpandTabThrowException()
+    {
         $this->expectException(\Exception::class);
         $xstring = new XString("test");
         $xstring->expandTabs(0);
     }
 
-    public function testExpandTabWithNegativeValueThrowException() {
+    public function testExpandTabWithNegativeValueThrowException()
+    {
         $this->expectException(\Exception::class);
         $xstring = new XString("test");
         $xstring->expandTabs(-1);

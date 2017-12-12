@@ -2,7 +2,8 @@
 
 namespace XString;
 
-trait Manipulate {
+trait Manipulate
+{
 
     /**
      * Append $suffix to $this->str
@@ -27,14 +28,14 @@ trait Manipulate {
      */
     public function partition($sep)
     {
-       // TODO: Implement
+        // TODO: Implement
     }
 
-     /**
-     * Reverse a utf8 encoded string.
-     *
-     * @return void
-     */
+    /**
+    * Reverse a utf8 encoded string.
+    *
+    * @return void
+    */
     public function reverse()
     {
         $length   = mb_strlen($this->str, 'UTF-8');
@@ -59,7 +60,7 @@ trait Manipulate {
      */
     public function slice($start, $end)
     {
-       // TODO: Implement
+        // TODO: Implement
     }
 
     /**
@@ -82,7 +83,6 @@ trait Manipulate {
         $part2 = mb_substr($this->str, $startPosition+mb_strlen($sep), mb_strlen($this->str));
 
         return [$part1, $sep, $part2];
-
     }
 
     /**
@@ -133,7 +133,6 @@ trait Manipulate {
      */
     public function wordSplit($str)
     {
-       // TODO: Implement
+        // TODO: Implement
     }
-
 }

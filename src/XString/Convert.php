@@ -2,7 +2,8 @@
 
 namespace XString;
 
-trait Convert {
+trait Convert
+{
 
     /**
      * SwapCase will swap characters case from upper to lower or lower to upper.
@@ -32,7 +33,7 @@ trait Convert {
      */
     public function toCamelCase()
     {
-       // TODO: Implement
+        // TODO: Implement
     }
 
     /**
@@ -114,7 +115,6 @@ trait Convert {
      */
     public function successor($start, $end)
     {
-       // TODO: Implement
+        // TODO: Implement
     }
-
 }

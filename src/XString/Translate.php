@@ -2,7 +2,8 @@
 
 namespace XString;
 
-trait Translate {
+trait Translate
+{
 
     /**
      * Shuffle randomizes runes in a string and returns the result
@@ -26,8 +27,4 @@ trait Translate {
 
         return $result;
     }
-
-
 }
-
-

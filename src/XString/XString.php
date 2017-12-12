@@ -2,13 +2,11 @@
 
 namespace XString;
 
-
 /**
  * XString class.
 */
 class XString implements \ArrayAccess
 {
-    
     use Format;
     use Manipulate;
     use Convert;
@@ -48,7 +46,7 @@ class XString implements \ArrayAccess
      */
     public function delete($pattern)
     {
-       // TODO: Implement
+        // TODO: Implement
     }
 
 
@@ -74,7 +72,7 @@ class XString implements \ArrayAccess
      */
     public function shuffle()
     {
-       // TODO: Implement
+        // TODO: Implement
     }
 
 
@@ -128,7 +126,7 @@ class XString implements \ArrayAccess
      */
     public function wordCount($str)
     {
-       // TODO: Implement
+        // TODO: Implement
     }
 
 
@@ -144,12 +142,12 @@ class XString implements \ArrayAccess
     }
 
 
-/**
-     * Get a specific chars of the current string.
-     *
-     * @param   int     $offset    Offset (can be negative and unbound).
-     * @return  string
-     */
+    /**
+         * Get a specific chars of the current string.
+         *
+         * @param   int     $offset    Offset (can be negative and unbound).
+         * @return  string
+         */
     public function offsetGet($offset)
     {
         return mb_substr($this->string, $this->computeOffset($offset), 1);
@@ -214,6 +212,4 @@ class XString implements \ArrayAccess
         }
         return $offset;
     }
-
-
 }

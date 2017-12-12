@@ -2,7 +2,8 @@
 
 namespace XString;
 
-trait Format {
+trait Format
+{
 
     /**
      * ExpandTabs can expand tabs ('\t') rune in str to one or more spaces dpending on
@@ -37,7 +38,7 @@ trait Format {
                     $column += mb_strwidth($rune, 'UTF-8');
                 }
             }
-            if($rune!="\t") {
+            if ($rune!="\t") {
                 $output .= $rune;
             }
         }
@@ -60,7 +61,7 @@ trait Format {
      */
     public function leftJustify($size, $content)
     {
-       // TODO: Implement
+        // TODO: Implement
     }
 
     /**
@@ -80,7 +81,6 @@ trait Format {
 
         $prefix = '';
         while ((mb_strlen($this->str, 'UTF-8') + mb_strlen($prefix, 'UTF-8')) < $size) {
-
             if ($size - (mb_strlen($this->str, 'UTF-8') + mb_strlen($prefix, 'UTF-8'))  >  mb_strlen($content, 'UTF-8')) {
                 $prefix .= $content;
             } else {
@@ -114,5 +114,4 @@ trait Format {
 
         return $this;
     }
-
 }
